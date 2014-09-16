@@ -61,11 +61,16 @@ body {
   transition: background-color 350ms ease-out, text-shadow 350ms ease-out;
 }
 
-.chart__item:hover,
-.chart__item:focus,
-.chart__item:active {
-  background-color: rgba(204, 204, 204, 1);
+.chart__item:hover {
+	background-color: rgba(204, 204, 204, 1);
+}
+
+.chart__item:hover .chart__label {
   text-shadow: #fff 0px 0px 2px;
+}
+
+.chart__item:hover .chart__bar {
+  background-color: rgba(127, 219, 255, 1);
 }
 
 .chart__link,
@@ -98,12 +103,6 @@ body {
   top: 0;
   background-color: rgba(127, 219, 255, 0.6);
   transition: background-color 350ms ease-out;
-}
-
-.chart__bar:hover,
-.chart__bar:focus,
-.chart__bar:active {
-  background-color: rgba(127, 219, 255, 1);
 }
 
 .chart__count {

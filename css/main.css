@@ -57,15 +57,21 @@ body {
   margin: 0 0.5%;
   position: relative;
   width: 7.3%;
-
   background-color: rgba(204, 204, 204, 0);
+  transition: background-color 350ms ease-out, text-shadow 350ms ease-out;
+}
+
+.chart__item:hover,
+.chart__item:focus,
+.chart__item:active {
+  background-color: rgba(204, 204, 204, 1);
+  text-shadow: #fff 0px 0px 2px;
 }
 
 .chart__link,
 .chart__link:link,
 .chart__link:visited {
   display: block;
-
   color: #e2e2e2;
   text-decoration: none;
 }
@@ -74,8 +80,8 @@ body {
   bottom: -1.7em;
   position: absolute;
   width: 100%;
-
   text-align: center;
+  transition: color 350ms ease-out;
 }
 
 .chart__bar-wrap {
@@ -90,8 +96,14 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-
   background-color: rgba(127, 219, 255, 0.6);
+  transition: background-color 350ms ease-out;
+}
+
+.chart__bar:hover,
+.chart__bar:focus,
+.chart__bar:active {
+  background-color: rgba(127, 219, 255, 1);
 }
 
 .chart__count {

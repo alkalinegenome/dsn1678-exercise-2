@@ -103,6 +103,8 @@ body {
   top: 0;
   background-color: rgba(127, 219, 255, 0.6);
   transition: background-color 350ms ease-out;
+	animation: slide-up 150ms linear;
+	-webkit-animation: slide-up 150ms linear;
 }
 
 .chart__count {
@@ -114,12 +116,11 @@ body {
   top: -2em;
   width: 4.6em;
   z-index: 1;
-
   background-color: #000;
   border-radius: 6px;
   opacity: 0;
-
   text-align: center;
+  transition: all 250ms linear;
 }
 
 .chart__count::after {
@@ -130,8 +131,40 @@ body {
   margin-left: 50%;
   position: absolute;
   width: 0;
-
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #000;
+}
+
+.chart__bar-wrap:hover .chart__count {
+	top:-4rem;
+	opacity: 1;
+}
+
+@keyframes slide-up {
+	0% {
+		top: 10em;
+	}
+	
+	50% {
+		top: 3.5em;
+	}
+	
+	100% {
+		top: 0em;
+	}
+}
+
+@-webkit-keyframes slide-up {
+	0% {
+		top: 10em;
+	}
+	
+	50% {
+		top: 3.5em;
+	}
+	
+	100% {
+		top: 0em;
+	}
 }
